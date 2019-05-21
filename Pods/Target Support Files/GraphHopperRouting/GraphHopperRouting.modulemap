@@ -1,0 +1,6 @@
+framework module GraphHopperRouting {
+  umbrella header "GraphHopperRouting-umbrella.h"
+
+  export *
+  module * { export * }
+}

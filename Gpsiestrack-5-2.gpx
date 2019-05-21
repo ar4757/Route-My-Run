@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="GPSies https://www.gpsies.com - Gpsiestrack-5" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>Gpsiestrack-5</name>
+    <link href="https://www.gpsies.com/">
+      <text>Gpsiestrack-5 on GPSies.com</text>
+    </link>
+    <time>2019-03-20T02:06:21Z</time>
+  </metadata>
+  <wpt lat="29.63028626" lon="-82.3727416">
+    <ele>26.000000</ele>
+    <time>2010-01-01T00:00:00Z</time>
+    <name>Undefined</name>
+    <sym>Waypoint</sym>
+  </wpt>
+  <wpt lat="29.65039082" lon="-82.3724842">
+    <ele>21.000000</ele>
+    <time>2010-01-01T00:16:41Z</time>
+    <name>Undefined</name>
+    <sym>Waypoint</sym>
+  </wpt>
+  <wpt lat="29.65035352" lon="-82.3642873">
+    <ele>45.000000</ele>
+    <time>2010-01-01T00:22:35Z</time>
+    <name>Undefined</name>
+    <sym>Waypoint</sym>
+  </wpt>
+</gpx>
+
