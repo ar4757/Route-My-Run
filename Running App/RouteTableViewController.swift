@@ -108,7 +108,7 @@ class RouteTableViewController: UITableViewController {
     var endingLocation: CLLocationCoordinate2D!
     var currentLocation: CLLocation!
     
-    let numOfRoutes = 100
+    let numOfRoutes = 1
     
     var coords: [CLLocationCoordinate2D]!
     
@@ -210,8 +210,8 @@ class RouteTableViewController: UITableViewController {
         endingLocation = presenter.endingLocation
 
         let presentersPresenter = presenter.presentingViewController as! TabBarController
-        let secondViewController = presentersPresenter.viewControllers![1] as! SecondViewController
-        currentLocation = secondViewController.currentLocation
+        let runTabController = presentersPresenter.viewControllers![1] as! RunTabController
+        currentLocation = runTabController.currentLocation
 
         if (currentLocation != nil && distance != nil && startingLocation != nil && endingLocation != nil) {
             getRoutes(numOfRoutes: numOfRoutes)
@@ -225,7 +225,7 @@ class RouteTableViewController: UITableViewController {
             }
             self?.tableView.reloadData()
         }
-        let routing = Routing(accessToken: "28050514-f042-46f1-961f-c5da0d73c6ee")
+        let routing = Routing(accessToken: "604fac72-b9f2-47e0-bb70-7eaf1984dfae")
         //Round Trip
         if (startingLocation.latitude == endingLocation.latitude && startingLocation.longitude == endingLocation.longitude) {
             let points = [startingLocation]
@@ -299,9 +299,10 @@ class RouteTableViewController: UITableViewController {
                 let desiredDistanceDouble = self.roundToTwoDecimals(double: self.metersToMiles(meters: desiredDistanceInMeters!))
                 
                 //Route must be within 5% of desired distance
-                if ((distanceDouble / desiredDistanceDouble >= 0.95) && (distanceDouble / desiredDistanceDouble <= 1.0) || (distanceDouble / desiredDistanceDouble <= 1.05) && (distanceDouble / desiredDistanceDouble >= 1.0)) {
-                    self.routes.append(newRoute)
-                }
+                //if ((distanceDouble / desiredDistanceDouble >= 0.95) && (distanceDouble / desiredDistanceDouble //<= 1.0) || (distanceDouble / desiredDistanceDouble <= 1.05) && (distanceDouble / //desiredDistanceDouble >= 1.0)) {
+                //    self.routes.append(newRoute)
+                //}
+                self.routes.append(newRoute)
                 print("Route count: \(self.routes.count)")
             })
         })
@@ -309,40 +310,35 @@ class RouteTableViewController: UITableViewController {
     
     func calcStartEndRoute(routing: Routing, options: FlexibleRouteOptions, seed: Int) {
         let task = routing.calculate(options, completionHandler: { (paths, error) in
-            var path: RoutePath?
-            if (paths != nil) {
-                if (seed < paths!.count) {
-                    path = paths![seed]
-                }
-            }
-            if (path != nil) {
-                print("Time: \(self.millisecondsToMinutes(milliseconds: path!.time)) minutes")
-                print("Distance: \(self.metersToMiles(meters: path!.distance)) miles")
+            print("Error: \(error)")
+            paths?.forEach({ path in
+                print("Time: \(self.millisecondsToMinutes(milliseconds: path.time)) minutes")
+                print("Distance: \(self.metersToMiles(meters: path.distance)) miles")
                 //print(path.time)
                 //print(path.distance)
-                print(path!.descend)
-                print(path!.ascend)
-                print("Instructions: \(path!.instructions.count)")
-                print("Points: \(path!.points.count)")
-                path!.instructions.forEach({ instruction in
+                print(path.descend)
+                print(path.ascend)
+                print("Instructions: \(path.instructions.count)")
+                print("Points: \(path.points.count)")
+                path.instructions.forEach({ instruction in
                     print(instruction.streetName)
                 })
-                self.coords = path!.points.map {
+                self.coords = path.points.map {
                     $0.coordinate
                 }
                 let coords = self.coords
                 let myPolyline = MKPolyline(coordinates: self.coords, count: self.coords.count)
                 
-                let distanceDouble = self.roundToTwoDecimals(double: self.metersToMiles(meters: path!.distance))
-                let upDouble = self.roundToTwoDecimals(double: self.metersToFeet(meters: path!.ascend))
-                let downDouble = self.roundToTwoDecimals(double: self.metersToFeet(meters: path!.descend))
+                let distanceDouble = self.roundToTwoDecimals(double: self.metersToMiles(meters: path.distance))
+                let upDouble = self.roundToTwoDecimals(double: self.metersToFeet(meters: path.ascend))
+                let downDouble = self.roundToTwoDecimals(double: self.metersToFeet(meters: path.descend))
                 
-                let longitudeDiff = abs(Double(path!.bbox!.topLeft.longitude) - Double(path!.bbox!.bottomRight.longitude))
-                let latitudeDiff = abs(Double(path!.bbox!.topLeft.latitude) - Double(path!.bbox!.bottomRight.latitude))
+                let longitudeDiff = abs(Double(path.bbox!.topLeft.longitude) - Double(path.bbox!.bottomRight.longitude))
+                let latitudeDiff = abs(Double(path.bbox!.topLeft.latitude) - Double(path.bbox!.bottomRight.latitude))
                 let span = MKCoordinateSpan(latitudeDelta: longitudeDiff, longitudeDelta: latitudeDiff)
                 let region = MKCoordinateRegion(center: self.currentLocation.coordinate, span: span)
                 
-                let instructions = path!.instructions
+                let instructions = path.instructions
                 
                 let newRoute = RouteObject()
                 newRoute.coords = coords
@@ -355,7 +351,7 @@ class RouteTableViewController: UITableViewController {
                 
                 self.routes.append(newRoute)
                 print("Route count: \(self.routes.count)")
-            }
+            })
         })
     }
     

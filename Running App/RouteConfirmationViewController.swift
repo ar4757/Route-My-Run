@@ -46,14 +46,16 @@ class RouteConfirmationViewController: UIViewController, MKMapViewDelegate, CLLo
         //let presenter = self.parent?.parent?.children.first as! FilterTableViewController
         let presenter = self.presentingViewController?.children.first as! FilterTableViewController
          let presentersPresenter = presenter.presentingViewController as! TabBarController
-         let secondViewController = presentersPresenter.viewControllers![1] as! SecondViewController
+         let runTabController = presentersPresenter.viewControllers![1] as! RunTabController
          
-         secondViewController.loadedRouteCoords = loadedRouteCoords
-         secondViewController.loadedRouteInstructions = loadedRouteInstructions
-         secondViewController.startingLocation = startingLocation
-         secondViewController.endingLocation = endingLocation
-         secondViewController.mapView.removeOverlays(secondViewController.mapView.overlays)
+         runTabController.loadedRouteCoords = loadedRouteCoords
+         runTabController.loadedRouteInstructions = loadedRouteInstructions
+         runTabController.startingLocation = startingLocation
+         runTabController.endingLocation = endingLocation
+         runTabController.mapView.removeOverlays(runTabController.mapView.overlays)
          self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+         runTabController.viewWillAppear(true)
+         runTabController.setRouteLoaded()
     }
     
     

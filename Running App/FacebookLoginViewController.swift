@@ -8,30 +8,47 @@
 
 import FacebookCore
 import FacebookLogin
-import MapKit
-import CoreLocation
 
-class FacebookLoginViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class PictureSubParams : Codable {
+    var url: String = ""
+}
+
+class PictureParams : Codable {
+    var data: PictureSubParams = PictureSubParams()
+}
+
+class FBUser : Codable {
+    var first_name: String = ""
+    var last_name: String = ""
+    var picture: PictureParams = PictureParams()
+}
+
+class MyDataStore {
+    static var user: FBUser = FBUser()
+}
+
+class FacebookLoginViewController: UIViewController, LoginButtonDelegate {
+    func loginButton(_ loginButton: FBSDKLoginKit.FBLoginButton, didCompleteWith result: FBSDKLoginKit.LoginManagerLoginResult?, error: (any Error)?) {
+        if let error = error {
+            print("Encountered Erorr: \(error)")
+        } else if let result = result, result.isCancelled {
+            print("Cancelled")
+        } else {
+            print("Logged In")
+            self.getUserProfile()
+        }
+    }
     
-    let locationManager = CLLocationManager()
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
+        
+    }
     
-    @IBOutlet weak var mapView: MKMapView!
-    
+            
     @IBOutlet weak var continueAsGuestButton: UIButton!
     
-    public var currentLocation: CLLocation!
-    
-    public var centerLocation = true
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        UserProfile.updatesOnAccessTokenChange = true
-        
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
         
         continueAsGuestButton.layer.cornerRadius = 3.0
         
@@ -44,71 +61,36 @@ class FacebookLoginViewController: UIViewController, MKMapViewDelegate, CLLocati
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if let accessToken = AccessToken.current {
+        if let accessToken = AccessToken.current, !accessToken.isExpired {
             // User is logged in, use 'accessToken' here.
             getUserProfile()
         }
         else {
-            let loginButton = LoginButton(readPermissions: [ .publicProfile, .email, .userFriends ])
+            let loginButton = FBLoginButton()
+            loginButton.permissions = ["public_profile", "email", "user_friends"]
             loginButton.center = view.center
-            
-            
+            loginButton.delegate = self
             view.addSubview(loginButton)
         }
     }
     
     func getUserProfile () {
-        /*let connection = GraphRequestConnection()
-        connection.add(GraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"], accessToken: AccessToken.current, httpMethod: GraphRequestHTTPMethod(rawValue: "GET")!, apiVersion: "2.8")) { httpResponse, result in
-            print("result == ", result)
-            switch result {
-            case .success(let response):
-                //print("Graph Request Succeeded: \(response)")
-                //print("Custom Graph Request Succeeded: \(response)")
-                //print("My facebook id is \(response.dictionaryValue?["id"])")
-                print("My name is \(response.dictionaryValue?["name"])")
-                self.performSegue(withIdentifier: "Login", sender: self)
-                
-            case .failed(let error):
-                print("Graph Request Failed: \(error)")
-            }
-        }
-        
-        connection.start()*/
-        
-        if let currentUser = UserProfile.current {
-            print("User's name is \(currentUser.firstName!)")
-            self.performSegue(withIdentifier: "Login", sender: self)
-        }
-        else {
-            UserProfile.loadCurrent({ fetchResult in
-                switch fetchResult {
-                case .success(let currentUser):
-                    print("User's name is \(currentUser.firstName!)")
-                    self.performSegue(withIdentifier: "Login", sender: self)
-                case .failed(let error):
-                    print("Error: \(error)")
-                }
-            })
-        }
+        guard AccessToken.current != nil else { return }
 
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if (centerLocation == true) {
-            if let location = locations.first {
-                let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
-                let region = MKCoordinateRegion(center: location.coordinate, span: span)
-                mapView.setRegion(region, animated: true)
+        let request = GraphRequest(graphPath: "me", parameters: ["fields":"first_name,last_name,id,picture"])
+        request.start() { connection, result, error in
+            if let result = result as? [String: Any], error == nil {
+                print("fetched user: \(result)")
+                let decoder = JSONDecoder()
+                do {
+                    let jsonData = try? JSONSerialization.data(withJSONObject:result)
+                    let user = try decoder.decode(FBUser.self, from: jsonData!)
+                    MyDataStore.user = user
+                } catch {
+                    print(error)
+                }
+                self.performSegue(withIdentifier: "Login", sender: self)
             }
-            centerLocation = false
         }
-        currentLocation = locations.last! as CLLocation!
     }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Swift.Error) {
-        print("error:: (error)")
-    }
-    
-    
 }

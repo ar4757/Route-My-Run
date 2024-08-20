@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 class FilterTableViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    var isRowHidden: [Bool] = [false, false, true, false, true, true, true, true]
+    var isRowHidden: [Bool] = [false, false, true, false, false, false, false, false]
     @IBOutlet weak var roundTripSwitchValue: UISwitch!
     @IBAction func roundTripSwitch(_ sender: UISwitch) {
         if (sender.isOn) {
@@ -176,7 +176,7 @@ class FilterTableViewController: UITableViewController, UIPickerViewDataSource, 
         distanceText.inputAccessoryView = toolBar
         
         let presenter = self.presentingViewController as! TabBarController
-        let presenterChild = presenter.viewControllers![1] as! SecondViewController
+        let presenterChild = presenter.viewControllers![1] as! RunTabController
         startingLocation = presenterChild.currentLocation.coordinate
         endingLocation = presenterChild.currentLocation.coordinate
         

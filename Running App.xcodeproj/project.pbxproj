@@ -3,27 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A7F5B0CF2A9325AE297BD3A /* Pods_Running_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C0BB332A5340DA912B2238 /* Pods_Running_App.framework */; };
+		3D2073072C74211300F05707 /* GraphHopperRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 3D2073062C74211300F05707 /* GraphHopperRouting */; };
 		3D359F8C21EE84A200CAB94A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D359F8B21EE84A200CAB94A /* AppDelegate.swift */; };
-		3D359F8E21EE84A200CAB94A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D359F8D21EE84A200CAB94A /* FirstViewController.swift */; };
-		3D359F9021EE84A200CAB94A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D359F8F21EE84A200CAB94A /* SecondViewController.swift */; };
+		3D359F8E21EE84A200CAB94A /* FeedTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D359F8D21EE84A200CAB94A /* FeedTabController.swift */; };
+		3D359F9021EE84A200CAB94A /* RunTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D359F8F21EE84A200CAB94A /* RunTabController.swift */; };
 		3D359F9321EE84A200CAB94A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D359F9121EE84A200CAB94A /* Main.storyboard */; };
 		3D359F9521EE84A400CAB94A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D359F9421EE84A400CAB94A /* Assets.xcassets */; };
 		3D359F9821EE84A400CAB94A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D359F9621EE84A400CAB94A /* LaunchScreen.storyboard */; };
 		3D359FA321EE84A400CAB94A /* Running_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D359FA221EE84A400CAB94A /* Running_AppTests.swift */; };
 		3D359FAE21EE84A400CAB94A /* Running_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D359FAD21EE84A400CAB94A /* Running_AppUITests.swift */; };
-		3D359FBC21EE85DF00CAB94A /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D359FBB21EE85DF00CAB94A /* ThirdViewController.swift */; };
+		3D359FBC21EE85DF00CAB94A /* StatsTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D359FBB21EE85DF00CAB94A /* StatsTabController.swift */; };
 		3D359FC221EFB3B100CAB94A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D359FC121EFB3B100CAB94A /* TabBarController.swift */; };
 		3D3674AF22402BE7002DA495 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D3674AE22402BE6002DA495 /* GoogleService-Info.plist */; };
 		3D3674B022402BE7002DA495 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D3674AE22402BE6002DA495 /* GoogleService-Info.plist */; };
 		3D3674B122402BE7002DA495 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D3674AE22402BE6002DA495 /* GoogleService-Info.plist */; };
 		3D56B6DA22418DB60082CB40 /* BarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D56B6D922418DB60082CB40 /* BarView.xib */; };
 		3D56B6DC22418FFF0082CB40 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D56B6DB22418FFF0082CB40 /* BarView.swift */; };
-		3D56B6DE2241AB2F0082CB40 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D56B6DD2241AB2F0082CB40 /* FourthViewController.swift */; };
+		3D56B6DE2241AB2F0082CB40 /* ProfileTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D56B6DD2241AB2F0082CB40 /* ProfileTabController.swift */; };
+		3D5DEFB12C6DA230000518C3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3D5DEFB02C6DA230000518C3 /* FirebaseAuth */; };
+		3D5DEFB32C6DA230000518C3 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3D5DEFB22C6DA230000518C3 /* FirebaseDatabase */; };
+		3D5DEFB52C6DA230000518C3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3D5DEFB42C6DA230000518C3 /* FirebaseFirestore */; };
+		3D5DEFB72C6DA230000518C3 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 3D5DEFB62C6DA230000518C3 /* FirebaseFunctions */; };
+		3D5DEFBA2C6DA463000518C3 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3D5DEFB92C6DA463000518C3 /* FacebookCore */; };
+		3D5DEFBC2C6DA463000518C3 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 3D5DEFBB2C6DA463000518C3 /* FacebookLogin */; };
 		3DB25D16225E7E7A003692EF /* DurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB25D15225E7E7A003692EF /* DurationViewController.swift */; };
 		3DB25D18225E7F95003692EF /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB25D17225E7F95003692EF /* DistanceViewController.swift */; };
 		3DB25D1A225E7FBD003692EF /* CaloriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB25D19225E7FBD003692EF /* CaloriesViewController.swift */; };
@@ -54,8 +60,8 @@
 /* Begin PBXFileReference section */
 		3D359F8821EE84A200CAB94A /* Running App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Running App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D359F8B21EE84A200CAB94A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D359F8D21EE84A200CAB94A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		3D359F8F21EE84A200CAB94A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		3D359F8D21EE84A200CAB94A /* FeedTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTabController.swift; sourceTree = "<group>"; };
+		3D359F8F21EE84A200CAB94A /* RunTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTabController.swift; sourceTree = "<group>"; };
 		3D359F9221EE84A200CAB94A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D359F9421EE84A400CAB94A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D359F9721EE84A400CAB94A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,12 +72,12 @@
 		3D359FA921EE84A400CAB94A /* Running AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Running AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D359FAD21EE84A400CAB94A /* Running_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Running_AppUITests.swift; sourceTree = "<group>"; };
 		3D359FAF21EE84A400CAB94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D359FBB21EE85DF00CAB94A /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		3D359FBB21EE85DF00CAB94A /* StatsTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTabController.swift; sourceTree = "<group>"; };
 		3D359FC121EFB3B100CAB94A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3D3674AE22402BE6002DA495 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D56B6D922418DB60082CB40 /* BarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarView.xib; sourceTree = "<group>"; };
 		3D56B6DB22418FFF0082CB40 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
-		3D56B6DD2241AB2F0082CB40 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		3D56B6DD2241AB2F0082CB40 /* ProfileTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabController.swift; sourceTree = "<group>"; };
 		3D978F1A22401CE50077135D /* Running App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Running App.entitlements"; sourceTree = "<group>"; };
 		3DB25D15225E7E7A003692EF /* DurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationViewController.swift; sourceTree = "<group>"; };
 		3DB25D17225E7F95003692EF /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
@@ -81,9 +87,6 @@
 		3DD3938F21FC32D4007B414E /* RouteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTableViewController.swift; sourceTree = "<group>"; };
 		3DD52C6F2238D1D400C65C17 /* FacebookLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginViewController.swift; sourceTree = "<group>"; };
 		3DE3A960225C17D900D5BD55 /* RouteConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteConfirmationViewController.swift; sourceTree = "<group>"; };
-		6822A44969BCA6FAEE966A8A /* Pods-Running App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Running App/Pods-Running App.debug.xcconfig"; sourceTree = "<group>"; };
-		B1BD95FACA15086A9E765703 /* Pods-Running App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Running App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Running App/Pods-Running App.release.xcconfig"; sourceTree = "<group>"; };
-		D1C0BB332A5340DA912B2238 /* Pods_Running_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Running_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +94,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A7F5B0CF2A9325AE297BD3A /* Pods_Running_App.framework in Frameworks */,
+				3D5DEFB32C6DA230000518C3 /* FirebaseDatabase in Frameworks */,
+				3D5DEFBA2C6DA463000518C3 /* FacebookCore in Frameworks */,
+				3D5DEFBC2C6DA463000518C3 /* FacebookLogin in Frameworks */,
+				3D5DEFB12C6DA230000518C3 /* FirebaseAuth in Frameworks */,
+				3D5DEFB52C6DA230000518C3 /* FirebaseFirestore in Frameworks */,
+				3D5DEFB72C6DA230000518C3 /* FirebaseFunctions in Frameworks */,
+				3D2073072C74211300F05707 /* GraphHopperRouting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,8 +129,6 @@
 				3D359FA121EE84A400CAB94A /* Running AppTests */,
 				3D359FAC21EE84A400CAB94A /* Running AppUITests */,
 				3D359F8921EE84A200CAB94A /* Products */,
-				DCA6C836201DD94F3B961063 /* Pods */,
-				DFA3988F196E83783B2953FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,13 +147,13 @@
 			children = (
 				3D3674AE22402BE6002DA495 /* GoogleService-Info.plist */,
 				3D359F8B21EE84A200CAB94A /* AppDelegate.swift */,
-				3D359F8D21EE84A200CAB94A /* FirstViewController.swift */,
-				3D359F8F21EE84A200CAB94A /* SecondViewController.swift */,
-				3D359FBB21EE85DF00CAB94A /* ThirdViewController.swift */,
+				3D359F8D21EE84A200CAB94A /* FeedTabController.swift */,
+				3D359F8F21EE84A200CAB94A /* RunTabController.swift */,
+				3D359FBB21EE85DF00CAB94A /* StatsTabController.swift */,
 				3DB25D15225E7E7A003692EF /* DurationViewController.swift */,
 				3DB25D17225E7F95003692EF /* DistanceViewController.swift */,
 				3DB25D19225E7FBD003692EF /* CaloriesViewController.swift */,
-				3D56B6DD2241AB2F0082CB40 /* FourthViewController.swift */,
+				3D56B6DD2241AB2F0082CB40 /* ProfileTabController.swift */,
 				3D359F9121EE84A200CAB94A /* Main.storyboard */,
 				3DE3A960225C17D900D5BD55 /* RouteConfirmationViewController.swift */,
 				3DC3AF672219F5910061AA8F /* MapSelectViewController.swift */,
@@ -181,23 +188,6 @@
 			path = "Running AppUITests";
 			sourceTree = "<group>";
 		};
-		DCA6C836201DD94F3B961063 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6822A44969BCA6FAEE966A8A /* Pods-Running App.debug.xcconfig */,
-				B1BD95FACA15086A9E765703 /* Pods-Running App.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		DFA3988F196E83783B2953FE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D1C0BB332A5340DA912B2238 /* Pods_Running_App.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,17 +195,24 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D359FB221EE84A400CAB94A /* Build configuration list for PBXNativeTarget "Running App" */;
 			buildPhases = (
-				49AA6C8B9D17145E0C9DE0CC /* [CP] Check Pods Manifest.lock */,
 				3D359F8421EE84A200CAB94A /* Sources */,
 				3D359F8521EE84A200CAB94A /* Frameworks */,
 				3D359F8621EE84A200CAB94A /* Resources */,
-				1D2784E004EC9AF8B972B6A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Running App";
+			packageProductDependencies = (
+				3D5DEFB02C6DA230000518C3 /* FirebaseAuth */,
+				3D5DEFB22C6DA230000518C3 /* FirebaseDatabase */,
+				3D5DEFB42C6DA230000518C3 /* FirebaseFirestore */,
+				3D5DEFB62C6DA230000518C3 /* FirebaseFunctions */,
+				3D5DEFB92C6DA463000518C3 /* FacebookCore */,
+				3D5DEFBB2C6DA463000518C3 /* FacebookLogin */,
+				3D2073062C74211300F05707 /* GraphHopperRouting */,
+			);
 			productName = "Running App";
 			productReference = 3D359F8821EE84A200CAB94A /* Running App.app */;
 			productType = "com.apple.product-type.application";
@@ -299,6 +296,11 @@
 				Base,
 			);
 			mainGroup = 3D359F7F21EE84A200CAB94A;
+			packageReferences = (
+				3D5DEFAF2C6DA230000518C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3D5DEFB82C6DA463000518C3 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				3D2073052C74211300F05707 /* XCRemoteSwiftPackageReference "GraphHopperRouting" */,
+			);
 			productRefGroup = 3D359F8921EE84A200CAB94A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,101 +343,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1D2784E004EC9AF8B972B6A6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Running App/Pods-Running App-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/GraphHopperRouting/GraphHopperRouting.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GraphHopperRouting.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Running App/Pods-Running App-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49AA6C8B9D17145E0C9DE0CC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Running App-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		3D359F8421EE84A200CAB94A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D359F9021EE84A200CAB94A /* SecondViewController.swift in Sources */,
+				3D359F9021EE84A200CAB94A /* RunTabController.swift in Sources */,
 				3DD3938E21FC1C1B007B414E /* FilterTableViewController.swift in Sources */,
 				3DB25D16225E7E7A003692EF /* DurationViewController.swift in Sources */,
 				3DB25D1A225E7FBD003692EF /* CaloriesViewController.swift in Sources */,
-				3D56B6DE2241AB2F0082CB40 /* FourthViewController.swift in Sources */,
+				3D56B6DE2241AB2F0082CB40 /* ProfileTabController.swift in Sources */,
 				3DD52C702238D1D400C65C17 /* FacebookLoginViewController.swift in Sources */,
 				3D359F8C21EE84A200CAB94A /* AppDelegate.swift in Sources */,
 				3D56B6DC22418FFF0082CB40 /* BarView.swift in Sources */,
-				3D359FBC21EE85DF00CAB94A /* ThirdViewController.swift in Sources */,
+				3D359FBC21EE85DF00CAB94A /* StatsTabController.swift in Sources */,
 				3DD3939021FC32D4007B414E /* RouteTableViewController.swift in Sources */,
 				3DC3AF682219F5910061AA8F /* MapSelectViewController.swift in Sources */,
 				3D359FC221EFB3B100CAB94A /* TabBarController.swift in Sources */,
 				3DB25D18225E7F95003692EF /* DistanceViewController.swift in Sources */,
 				3DE3A961225C17D900D5BD55 /* RouteConfirmationViewController.swift in Sources */,
-				3D359F8E21EE84A200CAB94A /* FirstViewController.swift in Sources */,
+				3D359F8E21EE84A200CAB94A /* FeedTabController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -601,7 +528,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "";
@@ -614,18 +541,17 @@
 		};
 		3D359FB321EE84A400CAB94A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6822A44969BCA6FAEE966A8A /* Pods-Running App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B48H9S93B2;
+				DEVELOPMENT_TEAM = 8UF2JRZG92;
 				INFOPLIST_FILE = "Running App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewratz.Running-App-Copy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewratz.Running-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -634,18 +560,17 @@
 		};
 		3D359FB421EE84A400CAB94A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1BD95FACA15086A9E765703 /* Pods-Running App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B48H9S93B2;
+				DEVELOPMENT_TEAM = 8UF2JRZG92;
 				INFOPLIST_FILE = "Running App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewratz.Running-App-Copy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrewratz.Running-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -774,6 +699,71 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D2073052C74211300F05707 /* XCRemoteSwiftPackageReference "GraphHopperRouting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ar4757/GraphHopperRouting";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3D5DEFAF2C6DA230000518C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+		3D5DEFB82C6DA463000518C3 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D2073062C74211300F05707 /* GraphHopperRouting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D2073052C74211300F05707 /* XCRemoteSwiftPackageReference "GraphHopperRouting" */;
+			productName = GraphHopperRouting;
+		};
+		3D5DEFB02C6DA230000518C3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D5DEFAF2C6DA230000518C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3D5DEFB22C6DA230000518C3 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D5DEFAF2C6DA230000518C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		3D5DEFB42C6DA230000518C3 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D5DEFAF2C6DA230000518C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		3D5DEFB62C6DA230000518C3 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D5DEFAF2C6DA230000518C3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		3D5DEFB92C6DA463000518C3 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D5DEFB82C6DA463000518C3 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		3D5DEFBB2C6DA463000518C3 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D5DEFB82C6DA463000518C3 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3D359F8021EE84A200CAB94A /* Project object */;
 }
